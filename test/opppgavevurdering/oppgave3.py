@@ -50,17 +50,20 @@ for verdi in eliteserielag:
 print(flest)
 
     
-#%%hvem som vant først
-min=100000
+min=eliteserielag[0]['seriemesterskap'][0]
+minLag = eliteserielag[0]['lag']
+
+
 
 for verdi in eliteserielag:
-     verdi["seriemesterskap"]
-     
-     for x in verdi["seriemesterskap"]: 
-        if x < min:
-             min=x
-             
 
+    if len(verdi["seriemesterskap"]) > 0:
+        minimum = verdi['seriemesterskap'][0]
+        minimumLag = verdi['lag']
+        if  minimum < min:
+            min = minimum
+            minLag = minimumLag
 
 print(min)
+print(minLag)
 # %%
