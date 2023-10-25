@@ -22,7 +22,7 @@ eliteserielag = [
 ]
 
 print("--------")
-print("lag med et seier mesterskap")
+print("lag med et serie mesterskap")
 print("--------")
 
 for verdi in eliteserielag:
@@ -43,17 +43,24 @@ for verdi in eliteserielag:
 print("--------")
 
 #hvem som har vunnet flest ganger
-flest=0
+flest= len(eliteserielag[0]['seriemesterskap'])
+vinnerlag= eliteserielag[0]['lag']
+
 for verdi in eliteserielag:
-        if len(verdi["seriemesterskap"]) > flest:  
-             flest == len(verdi["seriemesterskap"])
-print(flest)
+     antall=len(verdi['seriemesterskap'])
+     lag=verdi['lag']
+
+     if antall > flest:  
+          flest = antall
+          vinnerlag =lag
+
+print(f"{vinnerlag} vant flest ganger med {flest} seiere!")
 
     
+#%% vant første året
+
 min=eliteserielag[0]['seriemesterskap'][0]
 minLag = eliteserielag[0]['lag']
-
-
 
 for verdi in eliteserielag:
 
@@ -64,6 +71,26 @@ for verdi in eliteserielag:
             min = minimum
             minLag = minimumLag
 
-print(min)
-print(minLag)
+print(f"{minLag} vant i det første året altså i {min}")
+
+#vant siste året  
+
+max=eliteserielag[0]['seriemesterskap'][0]
+maxLag = eliteserielag[0]['lag']
+
+for verdi in eliteserielag:
+
+ 
+ 
+ if len(verdi["seriemesterskap"]) > 0:
+
+        maximum = verdi['seriemesterskap'][-1]
+        maximumLag = verdi['lag']
+
+        if  maximum > max:
+            max = maximum
+            maxLag = maximumLag
+
+print(f"{maxLag} vant i det siste året altså i {max}")
+
 # %%
