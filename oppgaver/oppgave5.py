@@ -27,7 +27,7 @@ def race(colors): # Funksjon for å simulere racet og returnere vinnerns farge
 
 	while True: #funksjonen slutter når en skilpadde når toppen av vinduet og vinner
 		for racer in turtles:
-			  # flytter hver turtle en tilfeldig lengde mellom 1 og 20
+			  # flytter hver turtle en tilfeldig lengde mellom 1 og 20 på y aksen
 			distance = random.randrange(1, 20) 
 			racer.forward(distance)
 
@@ -76,3 +76,9 @@ time.sleep(5) #pauser programmet i 5 sekunder så man kan se resultatet spille s
 #så får skillpaddene en tilfeldig farge fra listen
 #så simuleres racet i funskjonen race(colors) inni denne funksjonen kalles create_turtles(colors) for å visualisere
 #så "pauser" programmet i 5 sekunder så man kan se resultatet spille seg ut i illustrasjonen
+
+#hvor langt de skal
+#start på -HEIGHT//2 + 20, altså -280
+#slutt/målstrek på  HEIGHT // 2 - 10:, altså 290
+
+# skilpaddene må dra total distanse på 570 i y aksen for å nå målstreken fra start
