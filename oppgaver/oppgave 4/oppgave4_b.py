@@ -65,3 +65,5 @@ print("antall riktige er")
 #kallet skjekker antall riktige
 skjekker(vinnertall, lottokupong)
 
+
+# %%
