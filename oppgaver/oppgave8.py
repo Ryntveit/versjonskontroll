@@ -12,6 +12,7 @@ def tall(teller):
 def plassering(biler, plasser):
     spillere_fordelt = []
     if spillere <= biler*plasser:
+
         spillere_i_bil = spillere // biler
        
         for i in range(biler):
@@ -24,8 +25,8 @@ def plassering(biler, plasser):
             k = 0
             while rest != 0:
                 spillere_fordelt[k] = spillere_fordelt[k] + 1
-                rest -= 1
-                k += 1
+                rest = rest-1
+                k = k + 1
             return spillere_fordelt
        
     else:
@@ -35,10 +36,14 @@ def plassering(biler, plasser):
         rest = spillere - biler*plasser
         spillere_fordelt.append(rest)
         return spillere_fordelt
+    
+
+
 spillere = tall('skriv antall spillere')      
 biler = tall('Skriv antall biler')
 plasser = tall('Skriv antall plasser i hver bil')
  
+
 fordelte_spillere = plassering(biler, plasser)
 if len(fordelte_spillere) == biler:
     for i in range(biler):
