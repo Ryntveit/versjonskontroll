@@ -21,11 +21,11 @@ def plassering(biler, plasser):
             return spillere_fordelt
         else:
             rest = spillere % biler
-            j = 0
+            k = 0
             while rest != 0:
-                spillere_fordelt[j] = spillere_fordelt[j] + 1
+                spillere_fordelt[k] = spillere_fordelt[k] + 1
                 rest -= 1
-                j += 1
+                k += 1
             return spillere_fordelt
        
     else:
