@@ -44,12 +44,12 @@ biler = tall('Skriv antall biler')
 plasser = tall('Skriv antall plasser i hver bil')
  
 
-fordelte_spillere = plassering(biler, plasser)
-if len(fordelte_spillere) == biler:
+fordelt = plassering(biler, plasser)
+if len(fordelt) == biler:
     for i in range(biler):
-        print(f'Bil {i + 1}, skal ha {fordelte_spillere[i]} spillere.')
+        print(f'Bil {i + 1}, skal ha {fordelt[i]} spillere.')
 else:
     for i in range(biler):
-        print(f'Bil {i + 1}, er det {fordelte_spillere[i]} spillere.')
-    print(f'{fordelte_spillere[-1]} spillere får ikke plass i bilene.')
+        print(f'Bil {i + 1}, er det {fordelt[i]} spillere.')
+    print(f'{fordelt[-1]} spillere får ikke plass i bilene.')
 # %%
