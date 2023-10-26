@@ -81,4 +81,4 @@ time.sleep(5) #pauser programmet i 5 sekunder så man kan se resultatet spille s
 #start på -HEIGHT//2 + 20, altså -280
 #slutt/målstrek på  HEIGHT // 2 - 10:, altså 290
 
-# skilpaddene må dra total distanse på 570 i y aksen for å nå målstreken fra start
+# skilpaddene må dra total distanse på 570 langs y aksen for å nå målstreken fra start
